@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zs:zahtev xmlns:util="http://ftn.uns.ac.rs/util"
+ xmlns:zs="http://ftn.uns.ac.rs/zahtev"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/zahtev file:/C:/Users/vaske/Desktop/XML-Vaccination/XML-Vaccination/XML-Shema/zahtev_za_sertifikat.xsd" id_zahtev="id_zahtev0">
+    <zs:imePrezime>
+        <util:ime>ime0</util:ime>
+        <util:prezime>prezime0</util:prezime>
+    </zs:imePrezime>
+    <zs:datumRodjenja>2006-05-04</zs:datumRodjenja>
+    <zs:pol>
+        <util:zensko>false</util:zensko>
+    </zs:pol>
+    <zs:jmbg>1323339874354</zs:jmbg>
+    <zs:brojPasosa>3339490211</zs:brojPasosa>
+    <zs:razlog>razlog0</zs:razlog>
+    <zs:mesto>mesto0</zs:mesto>
+    <zs:dan>12.06</zs:dan>
+    <zs:godina>2020</zs:godina>
+    <zs:potpis>potpis0</zs:potpis>
+</zs:zahtev>

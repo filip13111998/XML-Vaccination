@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iz:izvestaj xmlns:util="http://ftn.uns.ac.rs/util"
+ xmlns:iz="http://ftn.uns.ac.rs/izvestaj"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/izvestaj file:/C:/Users/vaske/Desktop/XML-Vaccination/XML-Vaccination/XML-Shema/izvestaj_imunizacija.xsd">
+    <iz:datumOd>2006-05-04</iz:datumOd>
+    <iz:datumDo>2006-05-04</iz:datumDo>
+    <iz:podnetiDokumenti>podnetiDokumenti0</iz:podnetiDokumenti>
+    <iz:primljeno>primljeno0</iz:primljeno>
+    <iz:izdato>izdato0</iz:izdato>
+    <iz:dateVakcine>dateVakcine0</iz:dateVakcine>
+    <iz:doza>doza0</iz:doza>
+    <iz:doza>doza1</iz:doza>
+    <iz:fajzer>410</iz:fajzer>
+    <iz:sputnjik>13</iz:sputnjik>
+    <iz:moderna>23</iz:moderna>
+    <iz:sinofarm>0</iz:sinofarm>
+    <iz:astraZeneca>42</iz:astraZeneca>
+    <iz:datumIzdavanja>2006-05-04</iz:datumIzdavanja>
+    <iz:potpis>potpis0</iz:potpis>
+</iz:izvestaj>

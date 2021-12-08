@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:util="http://ftn.uns.ac.rs/util"
+           targetNamespace = "http://ftn.uns.ac.rs/digitalni_sertifikat"
+           xmlns:ds="http://ftn.uns.ac.rs/digitalni_sertifikat"
+           elementFormDefault="qualified">
+    
+    <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
+    
+    <xs:element name = "digitalni_sertifikat">    
+        <xs:complexType mixed= "true">
+            <xs:sequence>
+                <xs:element name = "QRCODE" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "brojSertifikata" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumIzdavanjaSertifikata" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "brojPasosa" type = "util:TBrojPasosa" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "doza" type = "util:TVakcina" minOccurs = "2" maxOccurs = "unbounded"/>
+                <!--<xs:element name = "drugaDoza" type = "util:TVakcina" maxOccurs = "1"/>-->
+                <xs:element name = "PCR" type = "util:TTest" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "Antigen" type = "util:TTest"  maxOccurs = "1"/>
+                <xs:element name = "Imunoloski" type = "util:TTest" maxOccurs = "1"/>
+                <xs:element name = "potpis" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumIzdavanja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+            </xs:sequence>
+            <xs:attribute name="id_digitalni_sertifikat" type="xs:string"/>
+            
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

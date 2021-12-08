@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:util="http://ftn.uns.ac.rs/util"
+           targetNamespace = "http://ftn.uns.ac.rs/zahtev"
+           xmlns:zs="http://ftn.uns.ac.rs/zahtev"
+           elementFormDefault="qualified">
+    
+    
+    
+    <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
+    
+    <xs:element name = "zahtev">    
+        <xs:complexType mixed= "true">
+            <xs:sequence>
+                <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "brojPasosa" type = "util:TBrojPasosa" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "razlog" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "mesto" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "dan" type = "util:TDatum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "godina" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "potpis" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+            </xs:sequence>
+            <xs:attribute name="id_zahtev" type="xs:string"/>
+            
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

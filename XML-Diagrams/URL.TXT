@@ -1,0 +1,8 @@
+URL-s:
+
+	Izvestaj             : http://ftn.uns.ac.rs/izvestaj/id_izvestaj
+	Obrazac              : http://ftn.uns.ac.rs/obrazac/id_obrazac
+	Interesovanje        : http://ftn.uns.ac.rs/interesovanje/id_interesovanje
+	Zahtev	      	     : http://ftn.uns.ac.rs/zahtev/id_zahtev
+	Digitalni Sertifikat : http://ftn.uns.ac.rs/digitalni_sertifikat/id_digitalni_sertifikat
+	Potvrda		     : http://ftn.uns.ac.rs/potvrda/id_potvrda
