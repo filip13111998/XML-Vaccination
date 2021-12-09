@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:util="http://ftn.uns.ac.rs/util"
+           targetNamespace = "http://ftn.uns.ac.rs/obrazac"
+           xmlns:ob="http://ftn.uns.ac.rs/obrazac"
+           elementFormDefault="qualified">
+    
+    <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
+    
+    <xs:element name = "obrazac">    
+        <xs:complexType mixed= "true">
+            <xs:sequence>
+                <xs:element name = "drzavljanstvo" type = "util:TDrzavljanstvo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "ime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "prezime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "imeRoditelja" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "mestoRodjenja" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "adresa" type = "util:TAdresa" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "naselje" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "opstina" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "grad" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "fiksni" type = "util:TFiksni" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "mobilni" type = "util:TMobilni" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "e-mail" type = "util:TMail" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "radniStatus" type = "util:TRadniStatus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "zanimanje" type = "util:TZanimanjeZaposlenog" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "socijalnaZastita" type = "util:TKorisnikUstanove" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "naziv" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "opstina" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "saglasnost" type = "util:TSaglasan" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "vakcina" type = "util:TTipVakcina" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "potpis" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datum" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "evidencija" type = "util:TEvidencija" minOccurs = "1" maxOccurs = "1"/>
+                
+            </xs:sequence>
+            <xs:attribute name="id_obrazac" type="xs:string"/>
+            
+        </xs:complexType>
+    </xs:element>
+    
+    
+</xs:schema>

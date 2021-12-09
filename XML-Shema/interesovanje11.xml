@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<in:interesovanje xmlns:util="http://ftn.uns.ac.rs/util"
+ xmlns:in="http://ftn.uns.ac.rs/interesovanje"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/interesovanje file:/C:/Users/vaske/Desktop/XML-Vaccination/XML-Vaccination/XML-Shema/interesovanje.xsd" id_interesovanje="RgFKThHbcHiDeJRC">
+    <in:drzavljanin>
+        <util:StraniDrzavljaninBezBoravka>false</util:StraniDrzavljaninBezBoravka>
+    </in:drzavljanin>
+    <in:jmbg>6017014534610</in:jmbg>
+    <in:ime>Mihailo</in:ime>
+    <in:prezime>Bubnjevic</in:prezime>
+    <in:e-mail>haha@gmail.com</in:e-mail>
+    <in:mobilni>0616546951</in:mobilni>
+    <in:fiksni>011909562</in:fiksni>
+    <in:lokacija>Ljubovija</in:lokacija>
+    <in:tipVakcina>
+        <util:Pfizer-BioNTech>false</util:Pfizer-BioNTech>
+    </in:tipVakcina>
+    <in:davalac>
+        <util:ne>true</util:ne>
+    </in:davalac>
+    <in:dan>17.11</in:dan>
+    <in:godina>1987</in:godina>
+    <in:potpis>cTw-Vuz3uZYNLLRt2cT</in:potpis>
+</in:interesovanje>

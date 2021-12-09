@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:util="http://ftn.uns.ac.rs/util"
+           targetNamespace = "http://ftn.uns.ac.rs/potvrda"
+           xmlns:pt="http://ftn.uns.ac.rs/potvrda"
+           elementFormDefault="qualified">
+    
+    <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
+    
+    <xs:element name = "potvrda">    
+        <xs:complexType mixed= "true">
+            <xs:sequence>
+                <xs:element name = "sifra" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumPrveDoze" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "serijaPrvaDoza" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumDrugeDoze" type = "xs:date"  maxOccurs = "1"/>
+                <xs:element name = "serijaDrugaDoza" type = "xs:string" maxOccurs = "1"/>
+                <xs:element name = "zdrastvenaUstanova" type = "xs:string" maxOccurs = "1"/>
+                <xs:element name = "nazivVakcine" type = "util:TProizvodjac" maxOccurs = "1"/>
+                <xs:element name = "datumIzdavanja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "QRCODE" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                
+                
+            </xs:sequence>
+            <xs:attribute name="id_potvrda" type="xs:string"/>
+            
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
