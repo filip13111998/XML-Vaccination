@@ -217,6 +217,20 @@
         </xs:sequence>
     </xs:complexType>
     
+    <xs:complexType name = "TDoza">
+        <xs:sequence>
+            <xs:element name = "serijaPrvaDoza" type = "xs:string"/>
+            <xs:element name = "datumDoza" type = "xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TRednaDoza">
+        <xs:sequence>
+            <xs:element name = "redniBroj" type = "xs:string"/>
+            <xs:element name = "kolicina" type = "xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
     <xs:complexType name = "TEkstremitet">
         <xs:choice>
             <xs:element name = "LR" type = "xs:boolean" />  

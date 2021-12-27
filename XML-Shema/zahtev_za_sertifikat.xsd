@@ -10,7 +10,7 @@
     <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
     
     <xs:element name = "zahtev">    
-        <xs:complexType mixed= "true">
+        <xs:complexType>
             <xs:sequence>
                 <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
@@ -19,10 +19,9 @@
                 <xs:element name = "brojPasosa" type = "util:TBrojPasosa" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "razlog" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "mesto" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "dan" type = "util:TDatum" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "godina" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datum" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 
-                <xs:element name = "potpis" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                
             </xs:sequence>
             <xs:attribute name="id_zahtev" type="xs:string"/>
             

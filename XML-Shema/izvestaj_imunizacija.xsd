@@ -8,7 +8,7 @@
     <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
     
     <xs:element name = "izvestaj">    
-        <xs:complexType mixed= "true">
+        <xs:complexType>
             <xs:sequence>
                 <xs:element name = "datumOd" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "datumDo" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
@@ -16,7 +16,7 @@
                 <xs:element name = "primljeno" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "izdato" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "dateVakcine" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "doza" type = "xs:string" maxOccurs = "unbounded"/>
+                <xs:element name = "doza" type = "util:TRednaDoza" maxOccurs = "unbounded"/>
                 <!--<xs:element name = "drugaDoza" type = "xs:string" maxOccurs = "1"/>-->
                <!-- <xs:element name = "trecaDoza" type = "xs:string" maxOccurs = "1"/>-->
                 <xs:element name = "fajzer" type = "xs:string" maxOccurs = "1"/>
@@ -25,9 +25,7 @@
                 <xs:element name = "sinofarm" type = "xs:string"  maxOccurs = "1"/>
                 <xs:element name = "astraZeneca" type = "xs:string" maxOccurs = "1"/>
                 <xs:element name = "datumIzdavanja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "potpis" type = "xs:string" maxOccurs = "1"/>
-                
-                
+                 
             </xs:sequence>
             <xs:attribute name="id_izvestaj" type="xs:string"/>
             

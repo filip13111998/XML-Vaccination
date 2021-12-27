@@ -8,12 +8,13 @@
     <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
     
     <xs:element name = "digitalni_sertifikat">    
-        <xs:complexType mixed= "true">
+        <xs:complexType>
             <xs:sequence>
                 <xs:element name = "QRCODE" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "brojSertifikata" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "datumIzdavanjaSertifikata" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>                
                 <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
@@ -23,7 +24,6 @@
                 <xs:element name = "PCR" type = "util:TTest" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "Antigen" type = "util:TTest"  maxOccurs = "1"/>
                 <xs:element name = "Imunoloski" type = "util:TTest" maxOccurs = "1"/>
-                <xs:element name = "potpis" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "datumIzdavanja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
             </xs:sequence>
             <xs:attribute name="id_digitalni_sertifikat" type="xs:string"/>
