@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<in:interesovanje xmlns:util="http://ftn.uns.ac.rs/util"
+ xmlns:in="http://ftn.uns.ac.rs/interesovanje"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/interesovanje file:/C:/Users/vaske/Desktop/XML-Vaccination/XML-Vaccination/XML-Shema/interesovanje.xsd" id_interesovanje="id_interesovanje0">
+    <in:drzavljanin>
+        <util:DrzavljaninSrbije>false</util:DrzavljaninSrbije>
+    </in:drzavljanin>
+    <in:jmbg>2341000000000</in:jmbg>
+    <in:ime>Nikola</in:ime>
+    <in:prezime>Nikolic</in:prezime>
+    <in:mail>jedan@gmail.com</in:mail>
+    <in:mobilni>0600000000</in:mobilni>
+    <in:fiksni>011000000</in:fiksni>
+    <in:lokacija>lokacija0</in:lokacija>
+    <in:tipVakcina>
+        <util:Moderna>true</util:Moderna>
+    </in:tipVakcina>
+    <in:davalac>
+        <util:da>true</util:da>
+    </in:davalac>
+    <in:datum>13-04-2021</in:datum>
+</in:interesovanje>

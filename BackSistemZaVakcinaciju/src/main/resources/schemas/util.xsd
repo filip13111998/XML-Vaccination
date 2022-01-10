@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace = "http://ftn.uns.ac.rs/util"
+           xmlns:util = "http://ftn.uns.ac.rs/util"
+           elementFormDefault="qualified">
+    
+    <xs:complexType name = "TImePrezime">
+        <xs:sequence>
+            <xs:element name = "ime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "prezime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TPol">
+        <xs:choice>
+            <xs:element name = "musko" type = "xs:boolean" />  
+            <xs:element name = "zensko" type = "xs:boolean" />  
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:simpleType name="TJmbg">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{13}"/> <!-- npr: 11099983213009 -->
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TBrojPasosa">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{10}"/> 
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name = "TVakcina" >
+        <xs:sequence>
+            <xs:element name = "brojDoze" type = "xs:string"></xs:element>
+            <xs:element name = "vakcina" type = "util:TTipVakcina" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "proizvodjac" type = "util:TProizvodjac" minOccurs = "1" maxOccurs = "1" />
+            <xs:element name = "datum" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "zdrastvenaUstanova" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TTipVakcina">
+        <xs:choice>
+            <xs:element name = "Pfizer-BioNTech" type = "xs:boolean" />  
+            <xs:element name = "Sinopharm" type = "xs:boolean" />
+            <xs:element name = "Sputnik-V" type = "xs:boolean" />
+            <xs:element name = "AstraZeneca-Oxford" type = "xs:boolean" />
+            <xs:element name = "Moderna" type = "xs:boolean" />
+            <xs:element name = "BiloKoja" type = "xs:boolean" />
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TProizvodjac">
+        <xs:choice>
+            <xs:element name = "Pfizer" type = "xs:boolean" />  
+            <xs:element name = "Sinopharm" type = "xs:boolean" />
+            <xs:element name = "Gamaleya" type = "xs:boolean" />
+            <xs:element name = "AstraZeneca" type = "xs:boolean" />
+            <xs:element name = "Moderna" type = "xs:boolean" />
+            <xs:element name = "BiloKo" type = "xs:boolean" />
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TTest" >
+        <xs:sequence>
+            <xs:element name = "vrsta" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "proizvodjac" type = "util:TProizvodjac" minOccurs = "1" maxOccurs = "1" />
+            <xs:element name = "datumUzorkovanje" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "datumIzdavanja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "rezultat" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name = "labaratorija" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="TDatum">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}.\d{2}"/> 
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TMail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TMobilni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="06\d{8}"/> 
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TFiksni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="011\d{6}"/> 
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name = "TDrzavljanin">
+        <xs:choice>
+            <xs:element name = "DrzavljaninSrbije" type = "xs:boolean" />  
+            <xs:element name = "StraniDrzavljaninSaPrebivalistem" type = "xs:boolean" />
+            <xs:element name = "StraniDrzavljaninBezBoravka" type = "xs:boolean" />
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TDavalacKrvi">
+        <xs:choice>
+            <xs:element name = "da" type = "xs:boolean" />  
+            <xs:element name = "ne" type = "xs:boolean" />
+        
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TDrzavljanstvo">
+        <xs:choice>
+            <xs:element name = "stbija" type = "util:TSrbija" />  
+            <xs:element name = "stranac" type = "util:TStranac" />
+            
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TSrbija">
+        <xs:sequence>
+            <xs:element name = "srbin" type = "xs:boolean" />  
+            <xs:element name = "jmbg" type = "util:TJmbg" />
+            
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TStranac">
+        <xs:sequence>
+            <xs:element name = "stranacIme" type = "util:TImePrezime" />  
+            <xs:element name = "brPasos" type = "util:TBrojPasosa" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TAdresa">
+        <xs:sequence>
+            <xs:element name = "ulica" type = "xs:boolean" />  
+            <xs:element name = "broj" type = "util:TJmbg" />
+            
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TRadniStatus">
+        <xs:choice>
+            <xs:element name = "zaposlen" type = "xs:boolean" />  
+            <xs:element name = "nezaposlen" type = "xs:boolean" />
+            <xs:element name = "penzioner" type = "xs:boolean" />
+            <xs:element name = "ucenik" type = "xs:boolean" />
+            <xs:element name = "student" type = "xs:boolean" />
+            <xs:element name = "dete" type = "xs:boolean" />
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TZanimanjeZaposlenog">
+        <xs:choice>
+            <xs:element name = "zdrastvenaZastita" type = "xs:boolean" />  
+            <xs:element name = "socijalnaZastita" type = "xs:boolean" />
+            <xs:element name = "prosveta" type = "xs:boolean" />
+            <xs:element name = "mup" type = "xs:boolean" />
+            <xs:element name = "vojska" type = "xs:boolean" />
+            <xs:element name = "drugo" type = "xs:boolean" />
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TKorisnikUstanove">
+        <xs:choice>
+            <xs:element name = "da" type = "xs:boolean" />  
+            <xs:element name = "ne" type = "xs:boolean" />
+            
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TSaglasan">
+        <xs:choice>
+            <xs:element name = "saglasanSam" type = "xs:boolean" />  
+            <xs:element name = "nisamSaglasan" type = "xs:boolean" />
+            
+        </xs:choice>
+    </xs:complexType>
+    
+    <xs:complexType name = "TEvidencija">
+        <xs:sequence>
+            <xs:element name = "evidencija" type = "util:TEvidencijaImpl" maxOccurs="1"/>  
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name = "TEvidencijaImpl">
+        <xs:sequence>
+            <xs:element name = "zdrastvenaUstanova" type = "xs:string" />  
+            <xs:element name = "punkt" type = "xs:string" />
+            <xs:element name = "imePRezime" type = "util:TImePrezime" />
+            <xs:element name = "faksimil" type = "xs:string" />
+            <xs:element name = "telefon" type = "util:TMobilni" />
+            <xs:element name = "vakcina" type = "util:TPrimljenaVakcina" maxOccurs="unbounded"/>
+            <xs:element name = "datumUtvrdjivanja" type = "xs:date" />
+            <xs:element name = "dijagnoza" type = "xs:string" />
+            <xs:element name = "komisija" maxOccurs="1" type = "xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name = "TPrimljenaVakcina">
+        <xs:sequence>
+            <xs:element name = "nazivVakcine" type = "util:TTipVakcina" />  
+            <xs:element name = "datumDavanjaVakcine" type = "xs:date" />  
+            <xs:element name = "nacinDavanjaVakcine" type = "xs:string" />  
+            <xs:element name = "ekstremitet" type = "util:TEkstremitet" />  
+            <xs:element name = "serijaVakcine" type = "xs:string" />  
+            <xs:element name = "proizvodjac" type = "util:TProizvodjac" />  
+            <xs:element name = "nezeljenaReakcija" type = "xs:string" /> 
+            <xs:element name = "potpisLekara" type = "xs:string" /> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TDoza">
+        <xs:sequence>
+            <xs:element name = "serijaPrvaDoza" type = "xs:string"/>
+            <xs:element name = "datumDoza" type = "xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TRednaDoza">
+        <xs:sequence>
+            <xs:element name = "redniBroj" type = "xs:string"/>
+            <xs:element name = "kolicina" type = "xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "TEkstremitet">
+        <xs:choice>
+            <xs:element name = "LR" type = "xs:boolean" />  
+            <xs:element name = "DR" type = "xs:boolean" />
+            
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>
