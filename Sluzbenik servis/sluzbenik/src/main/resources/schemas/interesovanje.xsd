@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:util="http://ftn.uns.ac.rs/util"
+           targetNamespace = "http://ftn.uns.ac.rs/interesovanje"
+           xmlns:in="http://ftn.uns.ac.rs/interesovanje"
+           elementFormDefault="qualified">
+    
+    
+    
+    
+    <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
+    
+    <xs:element name = "interesovanje">    
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "drzavljanin" type = "util:TDrzavljanin" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "ime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "prezime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "e-mail" type = "util:TMail" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "mobilni" type = "util:TMobilni" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "fiksni" type = "util:TFiksni" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "lokacija" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "tipVakcina" type = "util:TTipVakcina" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "davalac" type = "util:TDavalacKrvi" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datum" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+
+            </xs:sequence>
+            <xs:attribute name="id_interesovanje" type="xs:string"/>
+            
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
