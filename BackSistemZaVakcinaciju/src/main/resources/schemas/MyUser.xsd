@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:util="http://ftn.uns.ac.rs/util"
+    targetNamespace = "http://ftn.uns.ac.rs/myUser"
+    xmlns:in="http://ftn.uns.ac.rs/myUser"
+    elementFormDefault="qualified">
+    
+    
+    <xs:import namespace="http://ftn.uns.ac.rs/util" schemaLocation="util.xsd"/>
+    
+    <xs:element name = "MyUser">    
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "fname" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "lname" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "mail" type = "util:TMail" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "mobilni" type = "util:TMobilni" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "fiksni" type = "util:TFiksni" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "username" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "password" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                
+                <xs:element name = "brInt" type = "xs:int" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "brPot" type = "xs:int" minOccurs = "1" maxOccurs = "1"/>
+                
+            </xs:sequence>
+            <xs:attribute name="id_interesovanje" type="xs:string"/>
+            
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

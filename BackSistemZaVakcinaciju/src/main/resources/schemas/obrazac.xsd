@@ -10,10 +10,10 @@
     <xs:element name = "obrazac">    
         <xs:complexType>
             <xs:sequence>
+            
                 <xs:element name = "drzavljanstvo" type = "util:TDrzavljanstvo" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "ime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "prezime" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
-                
                 <xs:element name = "imeRoditelja" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
@@ -24,13 +24,12 @@
                 <xs:element name = "grad" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "fiksni" type = "util:TFiksni" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "mobilni" type = "util:TMobilni" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "e-mail" type = "util:TMail" minOccurs = "1" maxOccurs = "1"/>
-                
+                <xs:element name = "mail" type = "util:TMail" minOccurs = "1" maxOccurs = "1"/>               
                 <xs:element name = "radniStatus" type = "util:TRadniStatus" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "zanimanje" type = "util:TZanimanjeZaposlenog" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "socijalnaZastita" type = "util:TKorisnikUstanove" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "naziv" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "opstina" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "opstinaSediste" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "saglasnost" type = "util:TSaglasan" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "vakcina" type = "util:TTipVakcina" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "potpis" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>

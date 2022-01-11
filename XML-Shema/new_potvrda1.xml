@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pt:potvrda xmlns:util="http://ftn.uns.ac.rs/util"
+ xmlns:pt="http://ftn.uns.ac.rs/potvrda"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/potvrda file:/C:/Users/vaske/Desktop/XML-Vaccination/XML-Vaccination/XML-Shema/potvrda.xsd" id_potvrda="id_potvrda0">
+    <pt:sifra>sifra0</pt:sifra>
+    <pt:imePrezime>
+        <util:ime>ime0</util:ime>
+        <util:prezime>prezime0</util:prezime>
+    </pt:imePrezime>
+    <pt:datumRodjenja>2006-05-04</pt:datumRodjenja>
+    <pt:pol>
+        <util:musko>false</util:musko>
+    </pt:pol>
+    <pt:jmbg>0000000000000</pt:jmbg>
+    <pt:brojDoze>
+        <util:serijaPrvaDoza>serijaPrvaDoza0</util:serijaPrvaDoza>
+        <util:datumDoza>datumDoza0</util:datumDoza>
+    </pt:brojDoze>
+    <pt:brojDoze>
+        <util:serijaPrvaDoza>serijaPrvaDoza1</util:serijaPrvaDoza>
+        <util:datumDoza>datumDoza1</util:datumDoza>
+    </pt:brojDoze>
+    <pt:zdrastvenaUstanova>zdrastvenaUstanova0</pt:zdrastvenaUstanova>
+    <pt:nazivVakcine>
+        <util:Gamaleya>false</util:Gamaleya>
+    </pt:nazivVakcine>
+    <pt:datumIzdavanja>2006-05-04</pt:datumIzdavanja>
+    <pt:QRCODE>QRCODE0</pt:QRCODE>
+</pt:potvrda>
