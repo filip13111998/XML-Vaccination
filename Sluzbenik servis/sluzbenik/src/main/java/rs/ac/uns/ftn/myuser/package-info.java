@@ -5,5 +5,5 @@
 // Generated on: 2022.01.15 at 09:14:05 pm CET 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://ftn.uns.ac.rs/izvestaj", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package rs.ac.uns.ftn.izvestaj;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://ftn.uns.ac.rs/myUser", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package rs.ac.uns.ftn.myuser;

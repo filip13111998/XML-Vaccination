@@ -6,7 +6,7 @@
 //
 
 
-package rs.ac.uns.ftn.interesovanje;
+package rs.ac.uns.ftn.myuser;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,9 +14,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import rs.ac.uns.ftn.util.TDavalacKrvi;
-import rs.ac.uns.ftn.util.TDrzavljanin;
-import rs.ac.uns.ftn.util.TTipVakcina;
 
 
 /**
@@ -29,17 +26,16 @@ import rs.ac.uns.ftn.util.TTipVakcina;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="drzavljanin" type="{http://ftn.uns.ac.rs/util}TDrzavljanin"/>
  *         &lt;element name="jmbg" type="{http://ftn.uns.ac.rs/util}TJmbg"/>
- *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="prezime" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="e-mail" type="{http://ftn.uns.ac.rs/util}TMail"/>
+ *         &lt;element name="fname" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="lname" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="mail" type="{http://ftn.uns.ac.rs/util}TMail"/>
  *         &lt;element name="mobilni" type="{http://ftn.uns.ac.rs/util}TMobilni"/>
  *         &lt;element name="fiksni" type="{http://ftn.uns.ac.rs/util}TFiksni"/>
- *         &lt;element name="lokacija" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="tipVakcina" type="{http://ftn.uns.ac.rs/util}TTipVakcina"/>
- *         &lt;element name="davalac" type="{http://ftn.uns.ac.rs/util}TDavalacKrvi"/>
- *         &lt;element name="datum" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="brInt" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="brPot" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *       &lt;attribute name="id_interesovanje" type="{http://www.w3.org/2001/XMLSchema}string" />
  *     &lt;/restriction>
@@ -51,69 +47,40 @@ import rs.ac.uns.ftn.util.TTipVakcina;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "drzavljanin",
     "jmbg",
-    "ime",
-    "prezime",
-    "eMail",
+    "fname",
+    "lname",
+    "mail",
     "mobilni",
     "fiksni",
-    "lokacija",
-    "tipVakcina",
-    "davalac",
-    "datum"
+    "username",
+    "password",
+    "brInt",
+    "brPot"
 })
-@XmlRootElement(name = "interesovanje")
-public class Interesovanje {
+@XmlRootElement(name = "MyUser")
+public class MyUser {
 
-    @XmlElement(required = true)
-    protected TDrzavljanin drzavljanin;
     @XmlElement(required = true)
     protected String jmbg;
     @XmlElement(required = true)
-    protected String ime;
+    protected String fname;
     @XmlElement(required = true)
-    protected String prezime;
-    @XmlElement(name = "e-mail", required = true)
-    protected String eMail;
+    protected String lname;
+    @XmlElement(required = true)
+    protected String mail;
     @XmlElement(required = true)
     protected String mobilni;
     @XmlElement(required = true)
     protected String fiksni;
     @XmlElement(required = true)
-    protected String lokacija;
+    protected String username;
     @XmlElement(required = true)
-    protected TTipVakcina tipVakcina;
-    @XmlElement(required = true)
-    protected TDavalacKrvi davalac;
-    @XmlElement(required = true)
-    protected String datum;
+    protected String password;
+    protected int brInt;
+    protected int brPot;
     @XmlAttribute(name = "id_interesovanje")
     protected String idInteresovanje;
-
-    /**
-     * Gets the value of the drzavljanin property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TDrzavljanin }
-     *     
-     */
-    public TDrzavljanin getDrzavljanin() {
-        return drzavljanin;
-    }
-
-    /**
-     * Sets the value of the drzavljanin property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TDrzavljanin }
-     *     
-     */
-    public void setDrzavljanin(TDrzavljanin value) {
-        this.drzavljanin = value;
-    }
 
     /**
      * Gets the value of the jmbg property.
@@ -140,75 +107,75 @@ public class Interesovanje {
     }
 
     /**
-     * Gets the value of the ime property.
+     * Gets the value of the fname property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getIme() {
-        return ime;
+    public String getFname() {
+        return fname;
     }
 
     /**
-     * Sets the value of the ime property.
+     * Sets the value of the fname property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setIme(String value) {
-        this.ime = value;
+    public void setFname(String value) {
+        this.fname = value;
     }
 
     /**
-     * Gets the value of the prezime property.
+     * Gets the value of the lname property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPrezime() {
-        return prezime;
+    public String getLname() {
+        return lname;
     }
 
     /**
-     * Sets the value of the prezime property.
+     * Sets the value of the lname property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPrezime(String value) {
-        this.prezime = value;
+    public void setLname(String value) {
+        this.lname = value;
     }
 
     /**
-     * Gets the value of the eMail property.
+     * Gets the value of the mail property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEMail() {
-        return eMail;
+    public String getMail() {
+        return mail;
     }
 
     /**
-     * Sets the value of the eMail property.
+     * Sets the value of the mail property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEMail(String value) {
-        this.eMail = value;
+    public void setMail(String value) {
+        this.mail = value;
     }
 
     /**
@@ -260,99 +227,83 @@ public class Interesovanje {
     }
 
     /**
-     * Gets the value of the lokacija property.
+     * Gets the value of the username property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getLokacija() {
-        return lokacija;
+    public String getUsername() {
+        return username;
     }
 
     /**
-     * Sets the value of the lokacija property.
+     * Sets the value of the username property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setLokacija(String value) {
-        this.lokacija = value;
+    public void setUsername(String value) {
+        this.username = value;
     }
 
     /**
-     * Gets the value of the tipVakcina property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TTipVakcina }
-     *     
-     */
-    public TTipVakcina getTipVakcina() {
-        return tipVakcina;
-    }
-
-    /**
-     * Sets the value of the tipVakcina property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TTipVakcina }
-     *     
-     */
-    public void setTipVakcina(TTipVakcina value) {
-        this.tipVakcina = value;
-    }
-
-    /**
-     * Gets the value of the davalac property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TDavalacKrvi }
-     *     
-     */
-    public TDavalacKrvi getDavalac() {
-        return davalac;
-    }
-
-    /**
-     * Sets the value of the davalac property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TDavalacKrvi }
-     *     
-     */
-    public void setDavalac(TDavalacKrvi value) {
-        this.davalac = value;
-    }
-
-    /**
-     * Gets the value of the datum property.
+     * Gets the value of the password property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDatum() {
-        return datum;
+    public String getPassword() {
+        return password;
     }
 
     /**
-     * Sets the value of the datum property.
+     * Sets the value of the password property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDatum(String value) {
-        this.datum = value;
+    public void setPassword(String value) {
+        this.password = value;
+    }
+
+    /**
+     * Gets the value of the brInt property.
+     * 
+     */
+    public int getBrInt() {
+        return brInt;
+    }
+
+    /**
+     * Sets the value of the brInt property.
+     * 
+     */
+    public void setBrInt(int value) {
+        this.brInt = value;
+    }
+
+    /**
+     * Gets the value of the brPot property.
+     * 
+     */
+    public int getBrPot() {
+        return brPot;
+    }
+
+    /**
+     * Sets the value of the brPot property.
+     * 
+     */
+    public void setBrPot(int value) {
+        this.brPot = value;
     }
 
     /**
