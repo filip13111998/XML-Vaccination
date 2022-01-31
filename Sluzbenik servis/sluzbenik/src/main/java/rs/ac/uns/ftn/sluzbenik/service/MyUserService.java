@@ -2,6 +2,7 @@ package rs.ac.uns.ftn.sluzbenik.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import rs.ac.uns.ftn.myuser.MyUser;
 import rs.ac.uns.ftn.sluzbenik.jaxb.JaxB;
@@ -14,9 +15,13 @@ public class MyUserService {
     private MyUserRepository myUserRepository;
 
     @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
     private JaxB jaxB;
 
     public void saveUser(MyUser mu) throws Exception {
+        mu.setSifra(bCryptPasswordEncoder.encode(mu.getSifra()));
         String userXML = jaxB.marshall(MyUser.class,mu);
 
         myUserRepository.saveMyUser(userXML,mu.getJmbg());
@@ -29,28 +34,7 @@ public class MyUserService {
     }
 
 
-    public int loadInterId(String jmbg) throws Exception {
-        MyUser user = loadUser(jmbg);
-        return user.getBrInt();
 
-    }
-
-    public int loadAndAddInterId(String jmbg) throws Exception {
-        String user = myUserRepository.loadMyUser(jmbg);
-        MyUser userLoaded = jaxB.unmarshall(MyUser.class, user);
-        userLoaded.setBrInt(userLoaded.getBrInt()+1);
-        String newUser = jaxB.marshall(MyUser.class, userLoaded);
-        myUserRepository.saveMyUser(newUser, jmbg);
-        return userLoaded.getBrInt();
-
-    }
-
-
-    public int loadPotvrdaId(String jmbg) throws Exception {
-        MyUser user = loadUser(jmbg);
-        return user.getBrPot();
-
-    }
     public int loadAndAddPotvrdaId(String jmbg) throws Exception {
         MyUser user = loadUser(jmbg);
         user.setBrPot(user.getBrPot()+1);

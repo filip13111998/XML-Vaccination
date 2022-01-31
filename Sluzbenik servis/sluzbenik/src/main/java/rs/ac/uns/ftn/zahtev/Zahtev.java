@@ -31,7 +31,7 @@ import rs.ac.uns.ftn.util.TPol;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="imePrezime" type="{http://ftn.uns.ac.rs/util}TImePrezime"/>
- *         &lt;element name="datumRodjenja" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="datumRodjenja" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="pol" type="{http://ftn.uns.ac.rs/util}TPol"/>
  *         &lt;element name="jmbg" type="{http://ftn.uns.ac.rs/util}TJmbg"/>
  *         &lt;element name="brojPasosa" type="{http://ftn.uns.ac.rs/util}TBrojPasosa"/>
@@ -64,8 +64,7 @@ public class Zahtev {
     @XmlElement(required = true)
     protected TImePrezime imePrezime;
     @XmlElement(required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar datumRodjenja;
+    protected String datumRodjenja;
     @XmlElement(required = true)
     protected TPol pol;
     @XmlElement(required = true)
@@ -113,7 +112,7 @@ public class Zahtev {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDatumRodjenja() {
+    public String getDatumRodjenja() {
         return datumRodjenja;
     }
 
@@ -125,7 +124,7 @@ public class Zahtev {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDatumRodjenja(XMLGregorianCalendar value) {
+    public void setDatumRodjenja(String value) {
         this.datumRodjenja = value;
     }
 
@@ -297,4 +296,18 @@ public class Zahtev {
         this.idZahtev = value;
     }
 
+    @Override
+    public String toString() {
+        return "Zahtev{" +
+                "imePrezime=" + imePrezime +
+                ", datumRodjenja=" + datumRodjenja +
+                ", pol=" + pol +
+                ", jmbg='" + jmbg + '\'' +
+                ", brojPasosa='" + brojPasosa + '\'' +
+                ", razlog='" + razlog + '\'' +
+                ", mesto='" + mesto + '\'' +
+                ", datum='" + datum + '\'' +
+                ", idZahtev='" + idZahtev + '\'' +
+                '}';
+    }
 }

@@ -48,13 +48,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "jmbg",
-    "fname",
-    "lname",
+    "ime",
+    "prezime",
     "mail",
     "mobilni",
     "fiksni",
-    "username",
-    "password",
+    "sifra",
     "brInt",
     "brPot"
 })
@@ -64,9 +63,9 @@ public class MyUser {
     @XmlElement(required = true)
     protected String jmbg;
     @XmlElement(required = true)
-    protected String fname;
+    protected String ime;
     @XmlElement(required = true)
-    protected String lname;
+    protected String prezime;
     @XmlElement(required = true)
     protected String mail;
     @XmlElement(required = true)
@@ -74,9 +73,7 @@ public class MyUser {
     @XmlElement(required = true)
     protected String fiksni;
     @XmlElement(required = true)
-    protected String username;
-    @XmlElement(required = true)
-    protected String password;
+    protected String sifra;
     protected int brInt;
     protected int brPot;
     @XmlAttribute(name = "id_interesovanje")
@@ -114,8 +111,8 @@ public class MyUser {
      *     {@link String }
      *     
      */
-    public String getFname() {
-        return fname;
+    public String getIme() {
+        return ime;
     }
 
     /**
@@ -126,8 +123,8 @@ public class MyUser {
      *     {@link String }
      *     
      */
-    public void setFname(String value) {
-        this.fname = value;
+    public void setIme(String value) {
+        this.ime = value;
     }
 
     /**
@@ -138,8 +135,8 @@ public class MyUser {
      *     {@link String }
      *     
      */
-    public String getLname() {
-        return lname;
+    public String getPrezime() {
+        return prezime;
     }
 
     /**
@@ -150,8 +147,8 @@ public class MyUser {
      *     {@link String }
      *     
      */
-    public void setLname(String value) {
-        this.lname = value;
+    public void setPrezime(String value) {
+        this.prezime = value;
     }
 
     /**
@@ -226,29 +223,6 @@ public class MyUser {
         this.fiksni = value;
     }
 
-    /**
-     * Gets the value of the username property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUsername() {
-        return username;
-    }
-
-    /**
-     * Sets the value of the username property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUsername(String value) {
-        this.username = value;
-    }
 
     /**
      * Gets the value of the password property.
@@ -258,8 +232,8 @@ public class MyUser {
      *     {@link String }
      *     
      */
-    public String getPassword() {
-        return password;
+    public String getSifra() {
+        return sifra;
     }
 
     /**
@@ -270,8 +244,8 @@ public class MyUser {
      *     {@link String }
      *     
      */
-    public void setPassword(String value) {
-        this.password = value;
+    public void setSifra(String value) {
+        this.sifra = value;
     }
 
     /**

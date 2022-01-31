@@ -20,7 +20,7 @@ import java.io.File;
 @Service
 public class EntityManager {
 
-    private final static String TARGET_NAMESPACE = "http://nekiSajt.com";
+    private final static String TARGET_NAMESPACE = "http://vakcinisanje.com";
 
     public static final String UPDATE = "<xu:modifications version=\"1.0\" xmlns:xu=\"" + XUpdateProcessor.XUPDATE_NS
             + "\" xmlns=\"" + TARGET_NAMESPACE + "\">" + "<xu:update select=\"%1$s\">%2$s</xu:update>"

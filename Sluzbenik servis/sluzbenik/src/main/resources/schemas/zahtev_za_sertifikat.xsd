@@ -13,7 +13,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name = "imePrezime" type = "util:TImePrezime" minOccurs = "1" maxOccurs = "1"/>
-                <xs:element name = "datumRodjenja" type = "xs:date" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element name = "datumRodjenja" type = "xs:string" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "pol" type = "util:TPol" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "jmbg" type = "util:TJmbg" minOccurs = "1" maxOccurs = "1"/>
                 <xs:element name = "brojPasosa" type = "util:TBrojPasosa" minOccurs = "1" maxOccurs = "1"/>
