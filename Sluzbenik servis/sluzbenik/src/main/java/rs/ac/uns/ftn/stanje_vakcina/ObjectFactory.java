@@ -8,8 +8,6 @@
 
 package rs.ac.uns.ftn.stanje_vakcina;
 
-import rs.ac.uns.ftn.myuser.MyUser;
-
 import javax.xml.bind.annotation.XmlRegistry;
 
 

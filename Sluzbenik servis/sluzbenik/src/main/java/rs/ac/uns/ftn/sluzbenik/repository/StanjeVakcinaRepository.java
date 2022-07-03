@@ -29,17 +29,17 @@ public class StanjeVakcinaRepository {
         return (String) res.getContent();
     }
 
-    public String updateStanjeVakcina(String godina, int fajzer, int sputnjik, int moderna, int sinofarm, int astraZeneca) throws Exception {
+    public String updateStanjeVakcina(String godina, StanjeVakcina dodataStanja) throws Exception {
         String collectionId = "/db/stanje_vakcina/"+ godina;
         XMLResource res = entityManager.load(collectionId, godina);
 
         StanjeVakcina stanjeVakcina = jaxB.unmarshall(StanjeVakcina.class,(String) res.getContent());
 
-        stanjeVakcina.setAstraZeneca(stanjeVakcina.getAstraZeneca() + astraZeneca);
-        stanjeVakcina.setModerna(stanjeVakcina.getModerna() + moderna);
-        stanjeVakcina.setSinofarm(stanjeVakcina.getSinofarm() + sinofarm);
-        stanjeVakcina.setSputnjik(stanjeVakcina.getSputnjik() + sputnjik);
-        stanjeVakcina.setFajzer(stanjeVakcina.getFajzer() + fajzer);
+        stanjeVakcina.setAstraZeneca(stanjeVakcina.getAstraZeneca() + dodataStanja.getAstraZeneca());
+        stanjeVakcina.setModerna(stanjeVakcina.getModerna() + dodataStanja.getModerna());
+        stanjeVakcina.setSinofarm(stanjeVakcina.getSinofarm() + dodataStanja.getSinofarm());
+        stanjeVakcina.setSputnjik(stanjeVakcina.getSputnjik() + dodataStanja.getSputnjik());
+        stanjeVakcina.setFajzer(stanjeVakcina.getFajzer() + dodataStanja.getFajzer());
 
         String stanjeXML = jaxB.marshall(StanjeVakcina.class,stanjeVakcina);
 

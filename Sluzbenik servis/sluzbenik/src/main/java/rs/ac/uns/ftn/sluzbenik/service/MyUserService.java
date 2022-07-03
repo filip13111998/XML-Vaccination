@@ -4,7 +4,7 @@ package rs.ac.uns.ftn.sluzbenik.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import rs.ac.uns.ftn.myuser.MyUser;
+import rs.ac.uns.ftn.sluzbenik.myuser.MyUser;
 import rs.ac.uns.ftn.sluzbenik.jaxb.JaxB;
 import rs.ac.uns.ftn.sluzbenik.repository.MyUserRepository;
 
@@ -41,6 +41,16 @@ public class MyUserService {
         String newUser = jaxB.marshall(MyUser.class, user);
         myUserRepository.saveMyUser(newUser, jmbg);
         return user.getBrPot();
+
+    }
+
+    public MyUser login(int jmbg, String sifra) throws Exception {
+        MyUser user =  loadUser(Integer.toString(jmbg));
+        if(user.getSifra().equals(sifra)){
+            return user;
+        }else{
+            return null;
+        }
 
     }
 }

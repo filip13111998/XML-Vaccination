@@ -6,7 +6,7 @@
 //
 
 
-package rs.ac.uns.ftn.myuser;
+package rs.ac.uns.ftn.sluzbenik.myuser;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

@@ -3,12 +3,8 @@ package rs.ac.uns.ftn.sluzbenik.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rs.ac.uns.ftn.digitalni_sertifikat.DigitalniSertifikat;
-import rs.ac.uns.ftn.myuser.MyUser;
-import rs.ac.uns.ftn.potvrda.Potvrda;
 import rs.ac.uns.ftn.sluzbenik.jaxb.JaxB;
 import rs.ac.uns.ftn.sluzbenik.repository.SertifikatRepository;
-
-import java.util.ArrayList;
 
 @Service
 public class SertifikatService {
