@@ -1,0 +1,49 @@
+<div style="margin-left: 40%; margin-top: 1em;">
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="JMBG" aria-label="Search" name="searchValue"
+            [(ngModel)]="searchValue">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchObrazac()">Search</button>
+    </form>
+</div>
+
+<div *ngIf="prikaz === true; then thenBlock"></div>
+<ng-template #thenBlock>
+    <div style="width: 50%;  margin-left: 25%;margin-top: 2%;">
+        <h3 style="display: inline-block;">Vaccination process
+        </h3>
+
+    </div>
+</ng-template>
+
+<div id="vaccForm" class="centerBlock"></div>
+
+<div *ngIf="prikaz === true; then thbl"></div>
+<ng-template #thbl>
+
+    <button (click)="send()" class="btn btn-primary centerBlock" type="button" style="float: right;" data-toggle="modal"
+        data-target="#exampleModalCenter">Send</button>
+</ng-template>
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Enter Code:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="confirmCodeID" style="width: 100%;" name="confirmCode"
+                    [(ngModel)]="confirmCode" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" [attr.data-dismiss]="modalVariable"
+                    (click)="printCode()">Confirm
+                    Code</button>
+            </div>
+        </div>
+    </div>
+</div> -->

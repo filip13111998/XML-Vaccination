@@ -1,0 +1,32 @@
+<!-- Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Gradjanin Portal</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+            <a class="nav-item nav-link"><button type="button" class="btn btn-primary"
+                    (click)="vaccationChangeKoef()">Vaccation</button></a>
+            <a class="nav-item nav-link"><button type="button" class="btn btn-primary"
+                    (click)="documentsChangeKoef()">Documents</button></a>
+
+        </div>
+    </div>
+
+    <a class="nav-item nav-link" style="float: left;"><button type="button" class="btn btn-primary"
+            (click)="redirect()">Logout</button></a>
+</nav>
+
+<!-- Visualize component -->
+<div *ngIf="koeficient === 0; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <app-vaccination></app-vaccination>
+</ng-template>
+<ng-template #elseBlock>
+    <div *ngIf="koeficient === 1; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <app-documents></app-documents>
+    </ng-template>
+    <ng-template #elseBlock>
+        kurac
+    </ng-template>
+</ng-template>

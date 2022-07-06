@@ -1,0 +1,51 @@
+<h1 style="text-align: center;margin-top: 1em;">Users documents:</h1>
+<table class="table table-striped tablePosition">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" *ngFor="let coll of columns">{{coll}}</th>
+            <!-- <th scope="col">Tekst</th>
+            <th scope="col">View</th>
+            <th scope="col">HTML</th>
+            <th scope="col">PDF</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of tempArr;index as i">
+            <td scope="row">
+                {{i}}
+            </td>
+            <td>{{temp.text}}</td>
+            <td><button type="button" class="btn btn-secondary">View</button></td>
+            <td><button type="button" class="btn btn-danger">HTML</button></td>
+            <td><button type="button" class="btn btn-danger">PDF</button></td>
+        </tr>
+
+    </tbody>
+</table>
+<h1 style="text-align: center;margin-top: 2em;">Users metadata:</h1>
+<table class="table table-striped tablePosition">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" *ngFor="let coll of metadataColumns">{{coll}}</th>
+            <!-- <th scope="col">Tekst</th>
+            <th scope="col">View</th>
+            <th scope="col">HTML</th>
+            <th scope="col">PDF</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of tempArr;index as i">
+            <td scope="row">
+                {{i}}
+            </td>
+            <td>{{temp.text}}</td>
+            <!-- <td><button type="button" class="btn btn-secondary">JSON</button></td> -->
+            <td><button type="button" class="btn btn-warning">RDF</button>
+            </td>
+            <td><button type="button" class="btn btn-warning">JSON</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div style="height: 20px;"></div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:in = "http://ftn.uns.ac.rs/interesovanje" >
+    
+    
+    
+    <rdf:Description rdf:ID="in:jmbg">    
+        <in:tipVakcina>Pfizer-BioNTech</in:tipVakcina>
+        <in:datum>15.04.2021</in:datum>
+    </rdf:Description>
+    
+</rdf:RDF>
